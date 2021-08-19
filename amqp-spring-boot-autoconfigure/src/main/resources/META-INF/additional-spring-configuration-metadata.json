@@ -1,0 +1,67 @@
+{
+  "properties": [
+    {
+      "name": "app.config.amqp.dead-Letter-exchange",
+      "type": "java.lang.String",
+      "defaultValue": "dead-Letter-exchange",
+      "sourceType": "com.ugrong.framework.amqp.autoconfigure.properties.AmqpProperties",
+      "description": "死信的交换机名."
+    },
+    {
+      "name": "app.config.amqp.dead-letter-routing-key",
+      "type": "java.lang.String",
+      "defaultValue": "dead-letter-routing-key",
+      "sourceType": "com.ugrong.framework.amqp.autoconfigure.properties.AmqpProperties",
+      "description": "死信的路由key."
+    },
+    {
+      "name": "app.config.amqp.dead-letter-queue",
+      "type": "java.lang.String",
+      "defaultValue": "dead-letter-queue",
+      "sourceType": "com.ugrong.framework.amqp.autoconfigure.properties.AmqpProperties",
+      "description": "死信的队列名."
+    },
+    {
+      "name": "app.config.amqp.default-routing-key",
+      "type": "java.lang.String",
+      "defaultValue": "default-routing-key",
+      "sourceType": "com.ugrong.framework.amqp.autoconfigure.properties.AmqpProperties",
+      "description": "默认的路由key，当交换机与队列一一对应时可以使用该key."
+    },
+    {
+      "name": "app.config.amqp.enable-delayed-message",
+      "type": "java.lang.Boolean",
+      "defaultValue": false,
+      "sourceType": "com.ugrong.framework.amqp.autoconfigure.properties.AmqpProperties",
+      "description": "是否启用延时消息，默认不启用，启用时需要安装[rabbitmq-delayed-message-exchange]插件."
+    },
+    {
+      "name": "app.config.amqp.retry-max-attempts",
+      "type": "java.lang.Integer",
+      "defaultValue": 3,
+      "sourceType": "com.ugrong.framework.amqp.autoconfigure.properties.AmqpProperties",
+      "description": "最大重试次数（包含首次 所以该值应>1才有重试效果）默认：3."
+    },
+    {
+      "name": "app.config.amqp.retry-initial-interval",
+      "type": "java.lang.Long",
+      "defaultValue": 3000,
+      "sourceType": "com.ugrong.framework.amqp.autoconfigure.properties.AmqpProperties",
+      "description": "重试的时间间隔 默认：3000，单位：毫秒."
+    },
+    {
+      "name": "app.config.amqp.retry-multiplier",
+      "type": "java.lang.Double",
+      "defaultValue": 1,
+      "sourceType": "com.ugrong.framework.amqp.autoconfigure.properties.AmqpProperties",
+      "description": "重试的延迟倍数 默认：1； retryInitialInterval=5000l,retryMultiplier=2,则第一次重试为5秒，第二次为10秒，第三次为20秒..."
+    },
+    {
+      "name": "app.config.amqp.retry-max-interval",
+      "type": "java.lang.Long",
+      "defaultValue": 3000,
+      "sourceType": "com.ugrong.framework.amqp.autoconfigure.properties.AmqpProperties",
+      "description": "重试的最大间隔 默认：3000，单位：毫秒."
+    }
+  ]
+}
